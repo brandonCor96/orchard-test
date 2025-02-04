@@ -1,0 +1,30 @@
+name: Orchard Theme
+type: theme
+description: 'Basic structure for a Bootstrap Barrio SubTheme.'
+core_version_requirement: ^10.3 || ^11
+base theme: bootstrap_barrio
+
+libraries:
+braries:
+  - orchard_theme/bootstrap
+  - orchard_theme/global-styling
+
+regions:
+  top_header: 'Top header'
+  header: Header
+  header_form: 'Header form'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom_first: 'Featured bottom first'
+  footer_first: 'Footer first'
+
+# Information added by Drupal.org packaging script on 2024-12-06
+version: '5.5.19'
+project: 'bootstrap_barrio'
+datestamp: 1733499141

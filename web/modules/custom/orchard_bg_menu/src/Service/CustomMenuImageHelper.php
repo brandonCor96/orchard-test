@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\orchard_bg_menu\Services;
+namespace Drupal\orchard_bg_menu\Service;
 
 use Drupal\Core\Menu\MenuLinkInterface;
 use Drupal\Core\Menu\MenuLinkManagerInterface;

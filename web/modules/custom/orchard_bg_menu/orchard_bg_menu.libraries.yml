@@ -1,5 +1,0 @@
-background_style:
-  version: 1.0
-  css:
-    theme:
-      css/background_style.css: {}
