@@ -1,0 +1,9 @@
+name: Orchard - Product Entity
+type: module
+description: 'Provides a simple block for displaying the Product of the day.'
+package: Orchard
+core_version_requirement: ^10 || ^11
+# These modules are required by the tests, must be available at bootstrap time
+dependencies:
+  - drupal:options
+  - drupal:user

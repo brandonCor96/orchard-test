@@ -1,0 +1,4 @@
+services:
+  orchard_product.orchard_product_service:
+    class: 'Drupal\orchard_product\Service\OrchardProductService'
+    arguments: ['@entity_type.manager']

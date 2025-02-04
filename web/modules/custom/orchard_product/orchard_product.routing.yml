@@ -1,0 +1,67 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.orchard_entity_product.canonical:
+  path: '/orchard_entity_product/{orchard_entity_product}'
+  defaults:
+    # Calls the view controller, defined in the annotation of the product
+    # entity. This marks this route as belonging to this entity type.
+    _entity_view: 'orchard_entity_product'
+    _title: 'Product content'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix ('view')
+    # as the $operation parameter to checkAccess().
+    _entity_access: 'orchard_entity_product.view'
+
+entity.orchard_entity_product.collection:
+  path: '/orchard_entity_product/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the product entity.
+    _entity_list: 'orchard_entity_product'
+    _title: 'Product list'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view product entity'
+
+orchard_product.product_add:
+  path: '/orchard_entity_product/add'
+  defaults:
+    # Calls the form.add controller, defined in the product entity.
+    _entity_form: orchard_entity_product.default
+    _title: 'Add product'
+  requirements:
+    # Use the entity's access controller. _entity_create_access tells the router
+    # to use the access controller's checkCreateAccess() method instead of
+    # checkAccess().
+    _entity_create_access: 'orchard_entity_product'
+
+entity.orchard_entity_product.edit_form:
+  path: '/orchard_entity_product/{orchard_entity_product}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the product entity.
+    _entity_form: orchard_entity_product.default
+    _title: 'Edit Product'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('update') as the $operation parameter to checkAccess().
+    _entity_access: 'orchard_entity_product.update'
+
+entity.orchard_entity_product.delete_form:
+  path: '/product/{orchard_entity_product}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the product entity.
+    _entity_form: orchard_entity_product.delete
+    _title: 'Delete product'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('delete') as the $operation parameter to checkAccess().
+    _entity_access: 'orchard_entity_product.delete'
+
+orchard_product.product_settings:
+  path: '/admin/structure/orchard_entity_product_settings'
+  defaults:
+    _form: '\Drupal\orchard_product\Form\ProductSettingsForm'
+    _title: 'Product settings'
+  requirements:
+    _permission: 'administer product entity'

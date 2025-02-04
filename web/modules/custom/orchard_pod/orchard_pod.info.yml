@@ -1,0 +1,7 @@
+name: 'Orchard - Product of the Day'
+type: module
+description: 'A simple block to display the Products of the Day'
+package: Orchard
+core_version_requirement: ^10 || ^11
+dependencies:
+  - orchard_product:orchard_product

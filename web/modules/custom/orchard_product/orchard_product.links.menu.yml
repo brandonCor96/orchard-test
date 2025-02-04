@@ -1,0 +1,16 @@
+# Define the menu links for this module
+
+entity.orchard_entity_product.collection:
+  title: 'Product Entity'
+  route_name: entity.orchard_entity_product.collection
+  description: 'List products'
+orchard_entity_product.admin.structure.settings:
+  title: 'Product settings'
+  description: 'Configure product entity'
+  route_name:  orchard_product.product_settings
+  parent: system.admin_config
+orchard_entity_product.product_list:
+  title: 'Products'
+  description: 'Products List'
+  route_name:  entity.orchard_entity_product.collection
+  parent: system.admin_structure

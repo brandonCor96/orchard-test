@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function orchard_pod_theme() {
+  return [
+    'orchard_product_slider' => [
+      'variables' => ['items' => []],
+      'template' => 'orchard-product-slider',
+    ],
+  ];
+}

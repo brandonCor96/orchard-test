@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+product.settings_tab:
+  route_name: orchard_product.product_settings
+  title: Settings
+  base_route: orchard_product.product_settings
+
+product.view:
+  route_name: entity.orchard_entity_product.canonical
+  base_route: entity.orchard_entity_product.canonical
+  title: View
+
+product.page_edit:
+  route_name: entity.orchard_entity_product.edit_form
+  base_route: entity.orchard_entity_product.canonical
+  title: Edit
+
+product.delete_confirm:
+  route_name:  entity.orchard_entity_product.delete_form
+  base_route:  entity.orchard_entity_product.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,11 @@
+slider:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css: {}
+      css/slider.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js: {}
+    js/slider.js: {}
+  dependencies:
+    - core/drupalSettings
