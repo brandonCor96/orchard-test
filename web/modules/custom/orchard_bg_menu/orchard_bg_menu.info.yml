@@ -1,0 +1,7 @@
+name: 'Orchard - Background Menu'
+type: module
+description: 'Shows a Background Image on certain Menu Root'
+package: Orchard
+core_version_requirement: ^10 || ^11
+dependencies:
+  - menu_item_extras

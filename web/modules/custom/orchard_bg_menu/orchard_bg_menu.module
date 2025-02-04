@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Menu Background Switcher module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\custom_menu_image\Helper\CustomMenuImageHelper;
+
+/**
+ * Implementación de hook_preprocess_HOOK para la plantilla page.html.twig.
+ */
+function orchard_bg_menu_preprocess_page(array &$variables) {
+  /** @var \Drupal\custom_menu_image\Services\CustomMenuImageHelper $menu_helper */
+  $menu_helper = \Drupal::service('orchard_bg_menu.helper');
+
+  $custom_image_block = $menu_helper->getCustomImageBlock();
+  if ($custom_image_block) {
+    $variables['custom_image_block'] = [
+        '#theme' => 'custom_image_block',
+        '#custom_image_uri' => $custom_image_block['#custom_image_uri'],
+    ];
+  }
+}
+
+function orchard_bg_menu_theme($existing, $type, $theme, $path) {
+    return [
+        'custom_image_block' => [
+            'variables' => ['custom_image_uri' => NULL],
+            'template' => 'custom-image',
+        ],
+    ];
+}

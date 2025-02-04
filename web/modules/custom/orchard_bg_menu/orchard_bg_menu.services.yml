@@ -1,0 +1,4 @@
+services:
+  orchard_bg_menu.helper:
+    class: 'Drupal\orchard_bg_menu\Services\CustomMenuImageHelper'
+    arguments: ['@plugin.manager.menu.link', '@current_route_match']
