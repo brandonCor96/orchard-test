@@ -1,15 +1,15 @@
-uuid: c59b4da9-a905-4994-afa4-ba3d0e143b2f
+uuid: 2b447d40-a665-42a3-8175-af0db7472f2e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bootstrap_barrio
+    - orchard_theme
 _core:
-  default_config_hash: xk8HAWIUZCzYFsUX2sNmTNDUxSoCdwrEI1tpTT5LW9s
-id: bootstrap_barrio_breadcrumbs
-theme: bootstrap_barrio
+  default_config_hash: JOwSmO98z3UFRqYuV0Dsd9ctDpO5pvhGDy269U1--0g
+id: orchard_theme_breadcrumbs
+theme: orchard_theme
 region: breadcrumb
 weight: 0
 provider: null

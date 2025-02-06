@@ -2,3 +2,17 @@
  * @file
  * Subtheme specific CSS.
  */
+
+ .orchard-banner, .orchard-banner img {
+    width: 100%;
+    height: 400px;
+ }
+
+ .menu.menu-level-0 {
+    display: flex;
+    color: #fff;
+ }
+
+ .menu.menu-level-0 .menu-level-1 .menu-item a {
+    color: #fff;
+ }

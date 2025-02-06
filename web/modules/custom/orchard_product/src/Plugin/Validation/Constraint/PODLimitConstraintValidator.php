@@ -16,8 +16,7 @@ class PODLimitConstraintValidator extends ConstraintValidator {
   public function validate($value, Constraint $constraint) {
     foreach ($value as $item) {
       $orchard_service = \Drupal::service('orchard_product.orchard_product_service')->getProductsWithPodEnabled();
-
-      if ($item->value == 1 && $orchard_service  >= 5) {
+      if ($item->value == 1 && is_array($orchard_service) && count($orchard_service) >= 5) {
         $this->context->addViolation($constraint->greaterThan, []);
       }
     }

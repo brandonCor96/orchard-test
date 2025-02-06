@@ -1,4 +1,4 @@
-uuid: 1fbf13e5-c963-4f74-b46c-53d6b685a51d
+uuid: f1701239-523e-4890-b4a2-7afc3e123023
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,12 @@ dependencies:
     - system
   theme:
     - orchard_theme
-id: orchard_theme_mainnavigation
+_core:
+  default_config_hash: AKEAma_i99PcJdUw33mFdk7etT1W6eluzhgrm4F3T-o
+id: orchard_theme_main_menu
 theme: orchard_theme
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
-  expand_all_items: false
+  depth: 2
+  expand_all_items: true
 visibility: {  }
